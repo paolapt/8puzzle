@@ -86,5 +86,5 @@ solve_with_checkpoint(State, X, Visited) :-
     solve(NewState, [NewState|Visited]). %recursion
 
 start :-
-    InitialState = [3, 5, 0, 8, 4, 2, 1, 7, 6],
+    InitialState = [0, 1, 3, 4, 2, 5, 7, 8, 6],
     solve(InitialState, [InitialState]).
