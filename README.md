@@ -1,3 +1,3 @@
-# 8puzzle
+# LIS3082-1 Assignments
 
-LIS3082-1 Projects
+Named 8puzzle after the first project for this class
