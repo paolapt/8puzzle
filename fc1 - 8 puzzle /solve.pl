@@ -85,7 +85,6 @@ solve_with_checkpoint(State, X, Visited) :-
     show([Direction], [NewState]),%display move and new state (in matrix form)
     solve(NewState, [NewState|Visited]). %recursion
 
-
 start :-
-    initial = [0, 1, 3, 4, 2, 5, 7, 8, 6],
-    solve(initial, [initial]).
+    InitialState = [3, 5, 0, 8, 4, 2, 1, 7, 6],
+    solve(InitialState, [InitialState]).
