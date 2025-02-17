@@ -48,11 +48,6 @@ show([Move|Moves], [State|States]) :-
     format('~w ~w ~w~n', [G,H,I]),
     show(Moves, States). %print states in matrix form
 
-print_solution([]).
-print_solution([Move|Rest]) :-
-    write('Move: '), write(Move), nl,  %print current move
-    print_solution(Rest).  %recursive call to print remaining steps
-
 %check if we've reached the goal
 reached_goal(State) :- goal(State).
 
@@ -86,5 +81,5 @@ solve_with_checkpoint(State, X, Visited) :-
     solve(NewState, [NewState|Visited]). %recursion
 
 start :-
-    InitialState = [0, 1, 3, 4, 2, 5, 7, 8, 6],
-    solve(InitialState, [InitialState]).
+    Initial = [0, 1, 3, 4, 2, 5, 7, 8, 6],
+    solve(Initial, [Initial]).
